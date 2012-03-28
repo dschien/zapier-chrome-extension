@@ -1,0 +1,24 @@
+<li data-zap="{{id}}">
+   <div class="icons">
+      <div class="input img {{inputIcon}}"></img></div>
+      <span class="arrow"><img src="right.png"></img></span>
+      <div class="output img {{outputIcon}}"></div>
+      <div class="clear"></div>
+   </div>
+   <div class="name">
+      <span class="input-action">{{inputAction}}</span>
+      <span class="to">to</span>
+      <span class="output-action">{{outputAction}}</span>
+   </div>
+   <div class="bottom">
+      <a href="#" class="{{#paused}}disabled{{/paused}}" data-action="run" data-zap="{{id}}">Run Zap</a>
+      {{^paused}}
+      <a href="#" data-action="pause" data-zap="{{id}}">Pause Zap</a>
+      {{/paused}}
+      {{#paused}}
+      <a href="#" data-action="unpause" data-zap="{{id}}">Unpause Zap</a>
+      {{/paused}}
+      <div class="loading hide" data-loading="true"><img src="loading-small.gif"></img></div>
+      <div class="success hide" data-success="true">Success</div>
+   </div>
+</li>

@@ -1,0 +1,28 @@
+How to build frontend
+
+1. INSTALL REQUIREJS OPTIMIZER
+You need node.js already installed (NPM package)
+Install the global requirejs handler. This lets you run r.js inside any directory
+> npm install -g requirejs
+
+2. COMPILE COFFEESCRIPT -> JAVASCRIPT
+In any fashion you'd like. There is a script /bash/coffee.sh
+
+3. REMOVE TRAILING SEMI-COLON
+A bug in requirejs requires us to remove the trailing semi-colon from build.js
+build.js is found at /media/js/src/build.js. Remove the last semi-colon in the file.
+
+4. NAVIGATE TO THE PROPER DIRECTORY
+Navigate to /media/js/src in your command window
+
+5. RUN THE OPTIMIZER
+> sudo r.js -o app.build.js
+
+6. VIEW RESULTS
+All files are built into /media/js/build. However, you only need main.js for the site
+to work. Delete the rest or keep them.
+
+
+If you run into errors during step 5, it's likely due to a missing dependency or an old
+JS file whose coffeescript counter-part has long since been deleted. Delete the entire
+/media/js/src then go to step 2.

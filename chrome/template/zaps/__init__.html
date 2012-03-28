@@ -1,0 +1,23 @@
+<ul class="zaps">
+
+{{#zapHtml}}
+{{{.}}}
+{{/zapHtml}}
+
+{{^loaded}}
+<div class="message">Loading...</div>
+{{/loaded}}
+
+{{#loaded}}
+
+{{#notShowing}}
+<div class="not-showing">Not showing {{notShowing}} incomplete Zaps</div>
+{{/notShowing}}
+
+{{^notShowing}}
+<div class="message">No Zaps, why not <a href="#" data-outlink="app/edit">create one</a>?</div>
+{{/notShowing}}
+
+{{/loaded}}
+
+</ul>
