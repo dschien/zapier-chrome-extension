@@ -2,7 +2,7 @@
 define(['jquery', 'use!underscore', 'use!backbone', 'router'], function($, _, Backbone, Router) {
   var initialize;
   initialize = function() {
-    window.domain = "http://zapier.local";
+    window.domain = "https://zapier.com";
     this.router = new Router();
     if (!Backbone.history.start({
       pushState: true,

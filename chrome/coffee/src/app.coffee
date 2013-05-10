@@ -8,7 +8,7 @@ define([
 ($, _, Backbone, Router) ->
       
    initialize = () ->
-      window.domain = "http://zapier.local"
+      window.domain = "https://zapier.com"
 
       @router = new Router()
 

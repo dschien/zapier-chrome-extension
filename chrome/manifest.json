@@ -1,5 +1,6 @@
 {
-   "name": "Zapier",
+   "manifest_version": 2,
+   "name": "Zapier Classic",
    "icons": { 
       "16": "icon_16.png",
       "48": "icon_48.png",
@@ -9,7 +10,7 @@
    "description": "Official Chrome Extension for interfacing with Zapier.com",
    "browser_action": {
       "default_icon": "icon_16.png",
-      "popup": "popup.html"
+      "default_popup": "popup.html"
    },
    "offline_enabled": false,
    "permissions": [
